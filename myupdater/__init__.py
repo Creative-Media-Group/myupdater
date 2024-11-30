@@ -1,9 +1,10 @@
 import requests
 
 
-def updater(file_url, version=""):
+def updater(repo, repo_path, file_url):
     r = requests.get(url=file_url)
-    return r
+    version = r.content.decode()
+    return f"{repo}/{repo_path}/{version}"
 
 
 def writeversion(filepath, version):
@@ -12,4 +13,8 @@ def writeversion(filepath, version):
 
 
 if __name__ == "__main__":
-    print(updater(file_url=""))
+    print(
+        updater(
+            file_url="https://raw.githubusercontent.com/tct123/simplethanks/refs/heads/main/src/simplethanks/VERSION"
+        )
+    )
