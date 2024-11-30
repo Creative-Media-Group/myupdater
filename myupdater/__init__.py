@@ -6,5 +6,10 @@ def updater(file_url, version=""):
     return r
 
 
+def writeversion(filepath, version):
+    with open(file=f"{filepath}/VERSION", mode="w+") as f:
+        f.write(version)
+
+
 if __name__ == "__main__":
-    updater()
+    print(updater(file_url=""))
