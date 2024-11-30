@@ -15,6 +15,8 @@ def writeversion(filepath, version):
 if __name__ == "__main__":
     print(
         updater(
-            file_url="https://raw.githubusercontent.com/tct123/simplethanks/refs/heads/main/src/simplethanks/VERSION"
+            repo="https://github.com/tct123/simplethanks",
+            repo_path="/releases/tag",
+            file_url="https://raw.githubusercontent.com/tct123/simplethanks/refs/heads/main/src/simplethanks/VERSION",
         )
     )
